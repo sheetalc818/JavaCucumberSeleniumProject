@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Facebook" duration-ms="38088" started-at="2019-07-24T07:44:03Z" finished-at="2019-07-24T07:44:42Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunners.TestRunnerFacebook@3e9b1010]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Facebook" duration-ms="38088" started-at="2019-07-24T07:44:03Z" finished-at="2019-07-24T07:44:42Z">
+      <class name="TestRunners.TestRunnerFacebook">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.TestRunnerFacebook@3e9b1010]" name="setUpClass" is-config="true" duration-ms="160" started-at="2019-07-24T07:44:03Z" finished-at="2019-07-24T07:44:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestRunners.TestRunnerFacebook@3e9b1010]" name="beforeClass" is-config="true" duration-ms="6" started-at="2019-07-24T07:44:04Z" finished-at="2019-07-24T07:44:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Linux]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://www.facebook.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sheetalc818@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Premanshu8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunners.TestRunnerFacebook@3e9b1010]" name="runScenario" duration-ms="19669" started-at="2019-07-24T07:44:04Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-07-24T07:44:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To check whether user is able to login to Facebook using valid Credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login To Facebook with valid credentials"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunners.TestRunnerFacebook@3e9b1010]" name="runScenario" duration-ms="18095" started-at="2019-07-24T07:44:23Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-07-24T07:44:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful Login to Facebook Page with default credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login To Facebook with valid credentials"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.TestRunnerFacebook@3e9b1010]" name="tearDownClass" is-config="true" duration-ms="87" started-at="2019-07-24T07:44:41Z" finished-at="2019-07-24T07:44:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- TestRunners.TestRunnerFacebook -->
+    </test> <!-- Facebook -->
+  </suite> <!-- Facebook -->
+</testng-results>

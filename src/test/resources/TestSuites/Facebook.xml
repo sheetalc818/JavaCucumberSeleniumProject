@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Facebook" verbose="1">
+	<parameter name="operatingSystem" value="Linux"></parameter>
+	<parameter name="browser" value="Chrome"></parameter>
+	<parameter name="link" value="http://www.facebook.com"></parameter>
+	<parameter name="user" value="sheetalc818@gmail.com"></parameter>
+	<parameter name="password" value="Premanshu8"></parameter>
+
+	<test name="Facebook">
+		<classes>
+			<class name="TestRunners.TestRunnerFacebook" />
+		</classes>
+	</test>
+</suite>
