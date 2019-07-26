@@ -27,6 +27,7 @@ public class GenerateDefinitions
 		System.setProperty("webdriver.chrome.driver","src/test/resources/Driver/chromedriver");
 		driver = new ChromeDriver(options);
 		driver.get("http://www.facebook.com");
+		options.addArguments("--disable-dev-shm-usage");
 		driver.manage().window().maximize();
 	}
 	
