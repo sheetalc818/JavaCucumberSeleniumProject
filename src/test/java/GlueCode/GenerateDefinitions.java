@@ -26,8 +26,9 @@ public class GenerateDefinitions
 		options.addArguments("--disable-notifications");
 		System.setProperty("webdriver.chrome.driver","src/test/resources/Driver/chromedriver");
 		driver = new ChromeDriver(options);
+ 		options.addArguments("--no-sandbox");
+        	options.addArguments("--disable-dev-shm-usage");
 		driver.get("http://www.facebook.com");
-		options.addArguments("--disable-dev-shm-usage");
 		driver.manage().window().maximize();
 	}
 	
