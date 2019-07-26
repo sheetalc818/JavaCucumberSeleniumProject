@@ -9,11 +9,46 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Facebook</th></tr>
-<tr><td><a href="#t0">Facebook</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">38,088</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Facebook</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">49,327</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Facebook</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Facebook &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">TestRunners.TestRunnerFacebook</td><td><a href="#m0">runScenario</a></td><td rowspan="2">1563954263824</td><td rowspan="2">18095</td></tr><tr class="passedeven"><td><a href="#m1">runScenario</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Facebook</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Facebook &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestRunners.TestRunnerFacebook</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1564118998463</td><td rowspan="1">26727</td></tr><tr><th colspan="4">Facebook &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">TestRunners.TestRunnerFacebook</td><td><a href="#m1">runScenario</a></td><td rowspan="1">1564118976857</td><td rowspan="1">21601</td></tr></tbody>
 </table>
-<h2>Facebook</h2><h3 id="m0">TestRunners.TestRunnerFacebook#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Successful Login to Facebook Page with default credentials&quot;</td><td>&quot;Login To Facebook with valid credentials&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Facebook</h2><h3 id="m0">TestRunners.TestRunnerFacebook#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Successful Login to Facebook Page with default credentials&quot;</td><td>&quot;Login To Facebook with valid credentials&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=75.0.3770.100)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;admin1-LIVA-Z2V&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-55-generic&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: /tmp/.com.google.Chrome.0i31eK}, goog:chromeOptions: {debuggerAddress: localhost:36271}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 64d2a50867e32d5885ed22383e99ea82
+*** Element info: {Using=xpath, value=//a[contains(., &apos;News Feed&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:39)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:165)
+	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:61)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:95)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.toString(Unknown Source)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:131)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:305)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:131)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:268)
+	at Pages.BasicActions.checkElementPresent(BasicActions.java:52)
+	at Pages.FacebookWelcomePage.validateFacebookWelcomePage(FacebookWelcomePage.java:20)
+	at GlueCode.FacebookDefinitions.validateFacebookWelcomePage(FacebookDefinitions.java:45)
+	at ✽.Facebook Welcome page is successfully displayed(file:src/test/resources/FeturesFiles/Facebook/FacebookLogin.feature:20)
+... Removed 4 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">TestRunners.TestRunnerFacebook#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;To check whether user is able to login to Facebook using valid Credentials&quot;</td><td>&quot;Login To Facebook with valid credentials&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

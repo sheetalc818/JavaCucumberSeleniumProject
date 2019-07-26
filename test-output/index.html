@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Facebook">
-              <span class="suite-name border-passed">Facebook</span>
+              <span class="suite-name border-failed">Facebook</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Facebook">
-                    <span>Facebook.xml</span>
+                    <span>ParameterValues.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Facebook" class="hide-methods failed suite-Facebook"> (hide)</a> <!-- hide-methods failed suite-Facebook -->
+                      <a href="#" panel-name="suite-Facebook" class="show-methods failed suite-Facebook"> (show)</a> <!-- show-methods failed suite-Facebook -->
+                    </span>
+                    <div class="method-list-content failed suite-Facebook">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Facebook" title="TestRunners.TestRunnerFacebook" hash-for-method="runScenario(&quot;Successful Login to Facebook Page with default credentials&quot;, &quot;Login To Facebook with valid credenti...)">runScenario("Successful Login to Facebook Page with default credentials", "Login To Facebook with valid credenti...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Facebook -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,11 +114,6 @@
                       <a href="#" panel-name="suite-Facebook" class="show-methods passed suite-Facebook"> (show)</a> <!-- show-methods passed suite-Facebook -->
                     </span>
                     <div class="method-list-content passed suite-Facebook">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Facebook" title="TestRunners.TestRunnerFacebook" hash-for-method="runScenario(&quot;Successful Login to Facebook Page with default credentials&quot;, &quot;Login To Facebook with valid credenti...)">runScenario("Successful Login to Facebook Page with default credentials", "Login To Facebook with valid credenti...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Facebook" title="TestRunners.TestRunnerFacebook" hash-for-method="runScenario(&quot;To check whether user is able to login to Facebook using valid Credentials&quot;, &quot;Login To Facebook wit...)">runScenario("To check whether user is able to login to Facebook using valid Credentials", "Login To Facebook wit...)</a> <!-- method navigator-link -->
@@ -122,9 +131,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Facebook" class="panel Facebook">
-          <div class="suite-Facebook-class-passed">
+          <div class="suite-Facebook-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">TestRunners.TestRunnerFacebook</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -134,10 +143,55 @@
                   </a> <!-- runScenario("Successful Login to Facebook Page with default credentials", "Login To Facebook with valid credenti...) -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Successful Login to Facebook Page with default credentials", "Login To Facebook with valid credentials")</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=75.0.3770.100)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;admin1-LIVA-Z2V&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-55-generic&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: /tmp/.com.google.Chrome.0i31eK}, goog:chromeOptions: {debuggerAddress: localhost:36271}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 64d2a50867e32d5885ed22383e99ea82
+*** Element info: {Using=xpath, value=//a[contains(., &apos;News Feed&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:39)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:165)
+	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:61)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:95)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.toString(Unknown Source)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:131)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:305)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:131)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:268)
+	at Pages.BasicActions.checkElementPresent(BasicActions.java:52)
+	at Pages.FacebookWelcomePage.validateFacebookWelcomePage(FacebookWelcomePage.java:20)
+	at GlueCode.FacebookDefinitions.validateFacebookWelcomePage(FacebookDefinitions.java:45)
+	at ✽.Facebook Welcome page is successfully displayed(file:src/test/resources/FeturesFiles/Facebook/FacebookLogin.feature:20)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Facebook-class-failed -->
+          <div class="suite-Facebook-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestRunners.TestRunnerFacebook</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;To check whether user is able to login to Facebook using valid Credentials&quot;, &quot;Login To Facebook wit...)">
@@ -153,18 +207,18 @@
         </div> <!-- panel Facebook -->
         <div panel-name="test-xml-Facebook" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/home/admin1/eclipse-workspace/CucumberSelenium/src/test/resources/TestSuites/Facebook.xml</span>
+            <span class="header-content">/home/admin1/eclipse-workspace/CucumberSelenium/src/test/resources/TestSuites/ParameterValues.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Facebook&quot;&gt;
-  &lt;parameter name=&quot;password&quot; value=&quot;Premanshu8&quot;/&gt;
-  &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
-  &lt;parameter name=&quot;link&quot; value=&quot;http://www.facebook.com&quot;/&gt;
-  &lt;parameter name=&quot;operatingSystem&quot; value=&quot;Linux&quot;/&gt;
-  &lt;parameter name=&quot;user&quot; value=&quot;sheetalc818@gmail.com&quot;/&gt;
+  &lt;parameter name=&quot;password&quot; value=&quot;${password}&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;${browser}&quot;/&gt;
+  &lt;parameter name=&quot;link&quot; value=&quot;${link}&quot;/&gt;
+  &lt;parameter name=&quot;operatingSystem&quot; value=&quot;${operatingSystem}&quot;/&gt;
+  &lt;parameter name=&quot;user&quot; value=&quot;${user}&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Facebook&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestRunners.TestRunnerFacebook&quot;/&gt;
@@ -219,16 +273,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'TestRunners.TestRunnerFacebook')
-data.setCell(0, 3, 19669);
+data.setCell(0, 3, 26727);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'TestRunners.TestRunnerFacebook')
-data.setCell(1, 3, 18095);
+data.setCell(1, 3, 21601);
 window.suiteTableData['Facebook']= { tableData: data, tableDiv: 'times-div-Facebook'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 37 seconds</span>
+              <span class="suite-total-time">Total running time: 48 seconds</span>
               <div id="times-div-Facebook">
               </div> <!-- times-div-Facebook -->
             </div> <!-- times-div -->
@@ -260,20 +314,22 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
-                <span class="method-name">beforeClass(Linux, Chrome, http://www.facebook.com, sheetalc818@gmail.com, Premanshu8)</span>
-                <span class="method-start">160 ms</span>
+                <span class="method-name">beforeClass(${operatingSystem}, ${browser}, ${link}, ${user}, ${password})</span>
+                <span class="method-start">576 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("To check whether user is able to login to Facebook using valid Credentials", "Login To Facebook wit...)</span>
-                <span class="method-start">208 ms</span>
+                <span class="method-start">656 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("Successful Login to Facebook Page with default credentials", "Login To Facebook with valid credenti...)</span>
-                <span class="method-start">19881 ms</span>
+                <span class="method-start">22262 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">37979 ms</span>
+                <span class="method-start">49141 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

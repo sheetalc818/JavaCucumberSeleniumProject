@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Facebook]">
+  <parameter name="password" value="${password}"/>
+  <parameter name="browser" value="${browser}"/>
+  <parameter name="link" value="${link}"/>
+  <parameter name="operatingSystem" value="${operatingSystem}"/>
+  <parameter name="user" value="${user}"/>
+  <test thread-count="5" name="Facebook(failed)">
+    <classes>
+      <class name="TestRunners.TestRunnerFacebook">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="beforeClass"/>
+          <include name="runScenario" invocation-numbers="1"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- TestRunners.TestRunnerFacebook -->
+    </classes>
+  </test> <!-- Facebook(failed) -->
+</suite> <!-- Failed suite [Facebook] -->
